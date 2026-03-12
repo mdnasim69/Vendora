@@ -7,6 +7,7 @@ class AppTheme {
     progressIndicatorTheme: progressIndicatorThemeData,
     textTheme: TextTheme(),
     inputDecorationTheme: inputDecorationTheme,
+    scaffoldBackgroundColor: Colors.white,
   );
 
   static ThemeData darkTheme = ThemeData(

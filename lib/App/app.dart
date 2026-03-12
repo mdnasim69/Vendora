@@ -5,6 +5,7 @@ import 'package:vendora/App/Provider/themeProvider.dart';
 import 'package:vendora/App/appTheme.dart';
 import 'package:vendora/Feature/Auth/Presentation/Screens/splash_screen.dart';
 import 'package:vendora/Feature/Auth/Provider/OtpTimer_provider.dart';
+import 'package:vendora/Feature/Share/Presentation/Provider/mainBottomNavProvider.dart';
 
 class Vendora extends StatelessWidget {
   const Vendora({super.key});
@@ -12,9 +13,11 @@ class Vendora extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
+
       providers: [
         ChangeNotifierProvider(create: (_)=>ThemeProvider()..loadThemeMode()),
         ChangeNotifierProvider(create: (_)=>OtpTimerProvider()..Count(),),
+        ChangeNotifierProvider(create: (_)=>MainBottomNavProvider()),
       ],
       child: Consumer<ThemeProvider>(
         builder: (context,controller,_) {

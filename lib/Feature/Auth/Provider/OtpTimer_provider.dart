@@ -6,7 +6,7 @@ class OtpTimerProvider with ChangeNotifier{
   int _seconds =60;
   int get seconds => _seconds;
 
-  Count(){
+   void Count(){
     _seconds=60;
     Timer.periodic(Duration(seconds: 1),(t){
       _seconds--;
