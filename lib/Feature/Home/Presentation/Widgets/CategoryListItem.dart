@@ -15,7 +15,7 @@ class CategoryListItem extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         shrinkWrap: true,
         itemBuilder: (BuildContext context, int index) {
-          return CategoryItem();
+          return CategoryItem(title: 'Electronics Item eiiwewein',);
         },
         separatorBuilder: (BuildContext context, int index) {
           return SizedBox(width: 6);

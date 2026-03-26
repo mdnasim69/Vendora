@@ -15,7 +15,7 @@ class Cslider extends StatelessWidget {
       children: [
         CarouselSlider(
           options: CarouselOptions(
-            height: 170.0,
+            height: 150.0,
             autoPlay: true,
             viewportFraction:.85,
             onPageChanged: (index, reason) {
@@ -46,8 +46,8 @@ class Cslider extends StatelessWidget {
               children: [
                 for (int i = 0; i < 5; i++)
                   Container(
-                    width: 12,
-                    height: 12,
+                    width: 10,
+                    height: 10,
                     margin: EdgeInsets.symmetric(horizontal: 2),
                     decoration: BoxDecoration(
                         shape: BoxShape.circle,

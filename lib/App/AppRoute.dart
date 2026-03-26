@@ -3,6 +3,7 @@ import 'package:vendora/Feature/Auth/Presentation/Screens/OtpVerify_screen.dart'
 import 'package:vendora/Feature/Auth/Presentation/Screens/signIn_screen.dart';
 import 'package:vendora/Feature/Auth/Presentation/Screens/signUp_screen.dart';
 import 'package:vendora/Feature/Auth/Presentation/Screens/splash_screen.dart';
+import 'package:vendora/Feature/Product/Presentation/Screens/ProductListByCategoryScreen.dart';
 import 'package:vendora/Feature/Share/Presentation/Screens/Main_Bottom_Nav_Screen.dart';
 class AppRoute {
   static Route<dynamic> routeSettings(RouteSettings setting) {
@@ -17,6 +18,9 @@ class AppRoute {
       widget = OtpVerifyScreen();
     }else if (setting.name == MainBottomNavScreen.name) {
       widget = MainBottomNavScreen();
+    }else if (setting.name == Productlistbycategoryscreen.name) {
+      final String category= setting.arguments as String;
+      widget = Productlistbycategoryscreen(category: category);
     }else{
       widget=SizedBox();
     }
